@@ -5,8 +5,8 @@ pushd $dir
 cmd /c "bcdedit /set {default} bootmenupolicy legacy"
 Install-PackageProvider -Name chocolatey
 Install-PackageProvider -Name ChocolateyGet
-Install-PackageProvider -Name ChocolateyGui
-Set-PackageSource -Name chocolatey -trusted
+Install-Package -Name ChocolateyGui
+Set-PackageSource -Name chocolatey -Trusted -Force
 
 do {
     clear
