@@ -1,0 +1,32 @@
+Windows Registry Editor Version 5.00
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}]
+
+[HKEY_USERS\.DEFAULT\Control Panel\Keyboard]
+"InitialKeyboardIndicators"="2"
+"KeyboardDelay"="0"
+"KeyboardSpeed"="31"
+
+[HKEY_CURRENT_USER\Control Panel\Keyboard]
+"InitialKeyboardIndicators"="2"
+"KeyboardDelay"="0"
+"KeyboardSpeed"="31"
+
+[HKEY_USERS\.DEFAULT\Keyboard Layout\Preload]
+"1"="00000409"
+"2"="00000419"
+
+[HKEY_USERS\.DEFAULT\Keyboard Layout\Toggle]
+"Hotkey"="2"
+"Language Hotkey"="2"
+"Layout Hotkey"="1"
+
+[HKEY_CURRENT_USER\Keyboard Layout\Toggle]
+"Hotkey"="2"
+"Language Hotkey"="2"
+"Layout Hotkey"="1"
+
+[HKEY_CURRENT_USER\Keyboard Layout\Preload]
+"1"="00000409"
+"2"="00000419"
