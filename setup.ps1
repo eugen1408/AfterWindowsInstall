@@ -1,5 +1,5 @@
 Set-ExecutionPolicy Bypass
-Requires -RunAsAdministrator
+#Requires -RunAsAdministrator
 $dir = Split-Path $MyInvocation.MyCommand.Path
 pushd $dir
 cmd /c "bcdedit /set {default} bootmenupolicy legacy"
