@@ -1,9 +1,3 @@
-Set-ExecutionPolicy Bypass
-cmd /c "bcdedit /set {default} bootmenupolicy legacy"
-iwr https://git.io/fjbwi -UseBasicParsing -OutFile $env:TEMP\win10.reg; cmd /c "regedit /s %temp%\win10.reg"
-Install-PackageProvider -Name chocolatey
-Install-PackageProvider -Name ChocolateyGet
-Set-PackageSource -Name chocolatey -trusted
 Install-Package googlechrome
 Install-Package 7zip
 Install-Package everything
