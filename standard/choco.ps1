@@ -1,4 +1,5 @@
 cmd /c "bcdedit /set {default} bootmenupolicy legacy"
+cmd /c "regedit /s win10.reg"
 Install-PackageProvider -Name ChocolateyGet -Force
 Set-PackageSource -Name chocolatey -Trusted -Force
 Install-Package ChocolateyGui -Force
