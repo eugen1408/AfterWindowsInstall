@@ -26,7 +26,7 @@ do {
             &$ps.FullName
         }
         popd
-        Write-Host "$'$($item.Name)' done." -ForegroundColor Yellow
+        Write-Host "'$($item.Name)' done." -ForegroundColor Yellow
         Pause
     }
 } until ($input -eq 'q')
