@@ -10,6 +10,7 @@ Install-Package 7zip -Force
 Install-Package everything -Force
 Install-Package qbittorrent -Force
 Install-Package telegram -Force
+Install-Package directx -Force
 If ((Get-PnpDevice -ErrorAction SilentlyContinue -PresentOnly -Class Mouse -FriendlyName '*Logitech Gaming*' | measure).Count -gt 0) {Install-Package logitechgaming -Force}
 If ((Get-PnpDevice -ErrorAction SilentlyContinue -PresentOnly -Class Mouse -FriendlyName '*Unifying Mouse*' | measure).Count -gt 0) {Install-Package setpoint -Force}
 
