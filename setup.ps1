@@ -3,7 +3,6 @@ Set-ExecutionPolicy Bypass
 $dir = Split-Path $MyInvocation.MyCommand.Path
 pushd $dir
 cmd /c "bcdedit /set {default} bootmenupolicy legacy"
-Install-PackageProvider -Name chocolatey
 Install-PackageProvider -Name ChocolateyGet
 Install-Package -Name ChocolateyGui
 Set-PackageSource -Name chocolatey -Trusted -Force
