@@ -1,1 +1,1 @@
-Install-Package office365business -Force
+Install-Package office365proplus -Force
