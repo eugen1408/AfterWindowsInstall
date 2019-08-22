@@ -1,3 +1,7 @@
+cmd /c "bcdedit /set {default} bootmenupolicy legacy"
+Install-PackageProvider -Name ChocolateyGet
+Set-PackageSource -Name chocolatey -Trusted -Force
+Install-Package -Name ChocolateyGui
 Install-Package googlechrome
 Install-Package 7zip
 Install-Package qbittorrent
