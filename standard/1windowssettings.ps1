@@ -892,19 +892,7 @@ IF (-not (Test-Path -Path "HKCU:\Software\Classes\Typelib\{8cec5860-07a1-11d9-b1
 New-ItemProperty -Path "HKCU:\Software\Classes\Typelib\{8cec5860-07a1-11d9-b15e-000d56bfe6ee}\1.0\0\win64" -Name "(default)" -PropertyType String -Value "" -Force
 # Show Task Manager details
 # Раскрыть окно Диспетчера задач
-$taskmgr = Get-Process -Name Taskmgr -ErrorAction SilentlyContinue
-IF ($taskmgr)
-{
-	$taskmgr.CloseMainWindow()
-}
-$taskmgr = Start-Process -FilePath taskmgr.exe -WindowStyle Hidden -PassThru
-Do
-{
-	Start-Sleep -Milliseconds 100
-	$preferences = Get-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\TaskManager -Name Preferences -ErrorAction SilentlyContinue
-}
-Until ($preferences)
-Stop-Process -Name $taskmgr
+$preferences = Get-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\TaskManager -Name Preferences -ErrorAction SilentlyContinue
 $preferences.Preferences[28] = 0
 New-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\TaskManager -Name Preferences -PropertyType Binary -Value $preferences.Preferences -Force
 # Do not allow the computer to turn off the device to save power for desktop
