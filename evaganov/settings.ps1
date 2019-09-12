@@ -5,13 +5,13 @@ IF (-not (Test-Path -Path Registry::HKEY_CLASSES_ROOT\.ps1\ShellNew))
 {
 	New-Item -Path Registry::HKEY_CLASSES_ROOT\.ps1\ShellNew -Force
 }
-New-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\.ps1\ShellNew -Name NullFile -PropertyType String -Value -Force
+New-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\.ps1\ShellNew -Name NullFile -PropertyType String -Value "" -Force
 # New cmd file in Popup menu\Create
 IF (-not (Test-Path -Path Registry::HKEY_CLASSES_ROOT\.cmd\ShellNew))
 {
 	New-Item -Path Registry::HKEY_CLASSES_ROOT\.cmd\ShellNew -Force
 }
-New-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\.cmd\ShellNew -Name NullFile -PropertyType String -Value -Force
+New-ItemProperty -Path Registry::HKEY_CLASSES_ROOT\.cmd\ShellNew -Name NullFile -PropertyType String -Value "" -Force
 # Logitech mouse sensitivity
 If ((Get-PnpDevice -ErrorAction SilentlyContinue -PresentOnly -Class Mouse -FriendlyName '*Logitech Gaming*' | Measure-Object).Count -gt 0) 
 {
