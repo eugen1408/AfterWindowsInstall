@@ -683,6 +683,14 @@ $ExcludedApps = @(
 	"NVIDIACorp.NVIDIAControlPanel"
 	# Microsoft Store
 	".*Store.*"
+	"Microsoft.BingWeather"
+	"Microsoft.MicrosoftStickyNotes"
+	"Microsoft.MSPaint"
+	"Microsoft.WindowsAlarms"
+	"Microsoft.WindowsCalculator"
+	# mail etc
+	"microsoft.windowscommunicationsapps"
+	"Microsoft.WindowsMaps"
 )
 $OFS = "|"
 Get-AppxPackage -PackageTypeFilter Bundle -AllUsers | Where-Object {$_.Name -cnotmatch $ExcludedApps} | Remove-AppxPackage -AllUsers
@@ -704,6 +712,14 @@ $ExcludedApps = @(
 	"NVIDIACorp.NVIDIAControlPanel"
 	# Microsoft Store
 	".*Store.*"
+	"Microsoft.BingWeather"
+	"Microsoft.MicrosoftStickyNotes"
+	"Microsoft.MSPaint"
+	"Microsoft.WindowsAlarms"
+	"Microsoft.WindowsCalculator"
+	# mail etc
+	"microsoft.windowscommunicationsapps"
+	"Microsoft.WindowsMaps"
 )
 $OFS = "|"
 Get-AppxProvisionedPackage -Online | Where-Object -FilterScript {$_.DisplayName -cnotmatch $ExcludedApps} | Remove-AppxProvisionedPackage -Online
@@ -726,9 +742,6 @@ $features = @(
 	# Microsoft XPS Document Writer
 	# Средство записи XPS-документов (Microsoft)
 	"Printing-XPSServices-Features",
-	# Microsoft Print to PDF
-	# Печать в PDF (Майкрософт)
-	"Printing-PrintToPDFServices-Features",
 	# Work Folders Client
 	# Клиент рабочих папок
 	"WorkFolders-Client"
