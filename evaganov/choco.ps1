@@ -1,4 +1,3 @@
-If ((Get-PnpDevice -ErrorAction SilentlyContinue -PresentOnly -Class Display -InstanceId '*VEN_10DE*' | Measure-Object).Count -gt 0) {Install-Package nvidia-display-driver -Force}
 Install-Package everything -Force
 If ((Get-PnpDevice -ErrorAction SilentlyContinue -PresentOnly -Class Mouse -FriendlyName '*Logitech Gaming*' | Measure-Object).Count -gt 0) {Install-Package logitechgaming -Force}
 If ((Get-PnpDevice -ErrorAction SilentlyContinue -PresentOnly -Class Mouse -FriendlyName '*Unifying Mouse*' | Measure-Object).Count -gt 0) {Install-Package setpoint -Force}
