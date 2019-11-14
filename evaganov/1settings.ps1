@@ -20,3 +20,6 @@ If ((Get-PnpDevice -ErrorAction SilentlyContinue -PresentOnly -Class Mouse -Frie
     New-ItemProperty -Path "HKCU:\Control Panel\Mouse" -Name MouseSpeed -PropertyType String -Value 0 -Force
     New-ItemProperty -Path "HKCU:\Control Panel\Mouse" -Name MouseSensitivity -PropertyType String -Value 4 -Force
 }
+
+# allow ping
+New-NetFirewallRule -DisplayName "Allow inbound ICMPv4" -Direction Inbound -Protocol ICMPv4 -IcmpType 8 -Action Allow
